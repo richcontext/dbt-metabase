@@ -51,7 +51,7 @@ def main(args: list = None):
     parser.add_argument('--mb_https', metavar='HTTPS', type=bool, default=True, help="use HTTPS to connect to Metabase instead of HTTP")
     parser.add_argument('--database', metavar='DB', required=True, help="target database name")
     parser.add_argument('--schema', metavar='SCHEMA', required=True, help="target schema name")
-    parser.add_argument('--sync', metavar='ENABLE', type=bool, default=True, help="synchronize Metabase database before export")
+    parser.add_argument('--sync', metavar='ENABLE', type=bool, default=False, help="synchronize Metabase database before export")
     parser.add_argument('--sync_timeout', metavar='SECS', type=int, default=30, help="synchronization timeout (in secs)")
     parsed = parser.parse_args(args=args)
 
